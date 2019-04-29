@@ -3,7 +3,7 @@
   "description": "Laravel中国省市区无数据库实现方案",
   "type": "library",
   "require": {
-    "php": ">=5.5",
+    "php": ">=7.0",
     "illuminate/database": "5.*",
     "illuminate/support": "5.*",
     "illuminate/events": "5.*"
