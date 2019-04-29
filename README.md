@@ -1,4 +1,4 @@
-### 中国行政区划省市区（无数据库实现方案）
+### 中国行政区划省市区（无数据表实现方案）
 
 思路：通过身份证前6位来处理省市区的级联关系
 
@@ -13,7 +13,8 @@ composer require lvqingan/laravel-cn-region:dev-master
 2. 修改 `database/migration` 中的表结构，增加保存区域的字段（默认使用`region`）
 
 ```php
-$table->char('region', 6)->nullable()->comment('客户区域');
+$table->char('region', 6);
+$table->index(['region']);
 ```
 
 3. 在 `Eloquent` 的模型中添加 `HasRegion` trait
