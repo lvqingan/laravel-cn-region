@@ -2,6 +2,8 @@
 
 思路：通过身份证前6位来处理省市区的级联关系
 
+[![Build Status](https://api.travis-ci.org/lvqingan/laravel-cn-region.svg?branch=master)](https://travis-ci.org/lvqingan/laravel-cn-region)
+
 #### 安装
 
 1. 安装代码库
