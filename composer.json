@@ -13,7 +13,8 @@
   },
   "autoload": {
     "psr-4": {
-      "Lvqingan\\Region\\": ""
+      "Lvqingan\\Region\\": "",
+      "Lvqingan\\Test\\": "tests/"
     }
   }
 }

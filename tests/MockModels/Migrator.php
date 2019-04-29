@@ -1,6 +1,6 @@
 <?php
 
-namespace Lvqingan\Region\Tests\MockModels;
+namespace Lvqingan\Test\MockModels;
 
 use Illuminate\Database\Capsule\Manager as DB;
 use Illuminate\Database\Schema\Blueprint;

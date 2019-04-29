@@ -1,6 +1,6 @@
 <?php
 
-namespace Lvqingan\Region\Tests;
+namespace Lvqingan\Test;
 
 use Lvqingan\Region\Loader;
 use PHPUnit\Framework\TestCase;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Lvqingan\Region\Tests\MockModels;
+namespace Lvqingan\Test\MockModels;
 
 use Illuminate\Database\Eloquent\Model;
 use Lvqingan\Region\HasRegion;

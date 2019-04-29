@@ -2,9 +2,9 @@
 
 namespace Lvqingan\Region\Tests;
 
-use Lvqingan\Region\Tests\MockModels\Migrator;
-use Lvqingan\Region\Tests\MockModels\User;
-use Lvqingan\Region\Tests\MockModels\Contact;
+use Lvqingan\Test\MockModels\Migrator;
+use Lvqingan\Test\MockModels\User;
+use Lvqingan\Test\MockModels\Contact;
 use PHPUnit\Framework\TestCase;
 
 class HasRegionTest extends TestCase
