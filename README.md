@@ -13,7 +13,6 @@ $provinces = (new \Lvqingan\Region\Loader('province'))->load();
 ```json
 {
     "110000":"北京市",
-    ...
     "820000":"澳门特别行政区"
 }
 ```
@@ -27,7 +26,6 @@ $cities = (new \Lvqingan\Region\Loader('city', '340000'))->load();
 ```json
 {
     "340100":"合肥市",
-    ...
     "341800":"宣城市"
 }
 ```
@@ -41,7 +39,6 @@ $districts = (new \Lvqingan\Region\Loader('340100', '340100'))->load();
 ```json
 {
     "340103":"庐阳区",
-    ...
     "340111":"包河区"
 }
 ```
