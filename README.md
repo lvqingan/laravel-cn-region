@@ -2,6 +2,40 @@
 
 思路：通过身份证前6位来处理省市区的级联关系
 
+#### 安装
+
+1. 安装代码库
+
+```bash
+composer require lvqingan/laravel-cn-region:dev-master
+```
+
+2. 修改 `database/migration` 中的表结构，增加保存区域的字段（默认使用`region`）
+
+```php
+$table->char('region', 6)->nullable()->comment('客户区域');
+```
+
+3. 在 `Eloquent` 的模型中添加 `HasRegion` trait
+
+> 默认使用 `region` 作为字段名，如果数据表使用的是其他字段来保存区域值，则需要定义属性 `$regionFieldName`
+
+```php
+   class User extends Model
+   {
+       use HasRegion;
+   }
+```
+
+```php
+   class User extends Model
+   {
+       use HasRegion;
+
+       protected $regionFieldName = 'shengshiqu';
+   }
+```
+
 #### 获取下拉列表数据
 
 **省份**
@@ -44,24 +78,6 @@ $districts = (new \Lvqingan\Region\Loader('340100', '340100'))->load();
 ```
 
 #### 获取名称
-
-在 `Eloquent` 的模型中添加 `HasRegion` trait，默认使用 `region` 作为字段名，如果数据表使用的是其他字段来保存区域值，则需要定义属性 `$regionFieldName`
-
-```php
-   class User extends Model
-   {
-       use HasRegion;
-   }
-```
-
-```php
-   class User extends Model
-   {
-       use HasRegion;
-
-       protected $regionFieldName = 'shengshiqu';
-   }
-```
 
 实例化的模型对象可以调用下面的属性（假设区域值为340104）
 
