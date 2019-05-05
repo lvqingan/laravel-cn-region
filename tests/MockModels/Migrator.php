@@ -7,7 +7,6 @@ use Illuminate\Database\Schema\Blueprint;
 
 class Migrator
 {
-
     public function up()
     {
         DB::schema()->dropIfExists('users');
