@@ -1,14 +1,14 @@
 <?php
 
 /**
- * Register composer auto  loader
+ * Register composer auto  loader.
  */
-require __DIR__ . '/vendor/autoload.php';
+require __DIR__.'/vendor/autoload.php';
 
 /**
- * Initialize Capsule
+ * Initialize Capsule.
  */
-$capsule = new Illuminate\Database\Capsule\Manager;
+$capsule = new Illuminate\Database\Capsule\Manager();
 
 $capsule->addConnection([
     'driver'   => 'sqlite',
@@ -16,7 +16,7 @@ $capsule->addConnection([
     'prefix'   => '',
 ]);
 
-$capsule->setEventDispatcher(new Illuminate\Events\Dispatcher(new Illuminate\Container\Container));
+$capsule->setEventDispatcher(new Illuminate\Events\Dispatcher(new Illuminate\Container\Container()));
 
 $capsule->bootEloquent();
 

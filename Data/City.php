@@ -7,7 +7,8 @@ use Illuminate\Support\Str;
 class City implements Data
 {
     /**
-     * 获取全部数据
+     * 获取全部数据.
+     *
      * @return array
      */
     public function all()
@@ -364,8 +365,10 @@ class City implements Data
     }
 
     /**
-     * 根据编码返回数据
+     * 根据编码返回数据.
+     *
      * @param string $code
+     *
      * @return array|string|bool
      */
     public function find($code)
@@ -375,7 +378,7 @@ class City implements Data
         if (Str::endsWith($code, '0000')) { // 按省份查询
             $provincePrefix = substr($code, 0, 2);
 
-            $filtered = collect($all)->filter(function ($value, $key) use ($provincePrefix) {
+            $filtered = collect($all)->filter(function($value, $key) use ($provincePrefix) {
                 return Str::startsWith($key, $provincePrefix);
             });
 

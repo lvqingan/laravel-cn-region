@@ -7,7 +7,8 @@ use Illuminate\Support\Str;
 class District implements Data
 {
     /**
-     * 获取全部数据
+     * 获取全部数据.
+     *
      * @return array
      */
     public function all()
@@ -3164,8 +3165,10 @@ class District implements Data
     }
 
     /**
-     * 根据编码返回数据
+     * 根据编码返回数据.
+     *
      * @param string $code
+     *
      * @return array|string|bool
      */
     public function find($code)
@@ -3175,7 +3178,7 @@ class District implements Data
         if (Str::endsWith($code, '00')) { // 按市查询
             $cityPrefix = substr($code, 0, 4);
 
-            $filtered = collect($all)->filter(function ($value, $key) use ($cityPrefix) {
+            $filtered = collect($all)->filter(function($value, $key) use ($cityPrefix) {
                 return Str::startsWith($key, $cityPrefix);
             });
 

@@ -8,7 +8,8 @@ use PHPUnit\Framework\TestCase;
 class LoaderTest extends TestCase
 {
     /**
-     * 可以正确加载全部省份数据
+     * 可以正确加载全部省份数据.
+     *
      * @test
      */
     public function loadProvinces()
@@ -23,7 +24,8 @@ class LoaderTest extends TestCase
     }
 
     /**
-     * 可以正确加载城市数据
+     * 可以正确加载城市数据.
+     *
      * @test
      */
     public function loadCities()
@@ -41,7 +43,8 @@ class LoaderTest extends TestCase
     }
 
     /**
-     * 可以正确加载区县数据
+     * 可以正确加载区县数据.
+     *
      * @test
      */
     public function loadDistricts()
@@ -59,7 +62,8 @@ class LoaderTest extends TestCase
     }
 
     /**
-     * 只允许三种类型作为区域类型参数（province, city, district）
+     * 只允许三种类型作为区域类型参数（province, city, district）.
+     *
      * @test
      */
     public function restrictDataType()
@@ -70,7 +74,8 @@ class LoaderTest extends TestCase
     }
 
     /**
-     * 只允许6位数字作为过滤编码参数
+     * 只允许6位数字作为过滤编码参数.
+     * 
      * @test
      */
     public function restrictFilterCode()

@@ -20,12 +20,13 @@ class Loader
 
     /**
      * Loader constructor.
+     *
      * @param string $dataType 区域类型
      * @param string $filterCode 过滤编码
      */
     public function __construct($dataType, $filterCode = '')
     {
-        $dataClass = 'Lvqingan\\Region\\Data\\' . Str::studly($dataType);
+        $dataClass = 'Lvqingan\\Region\\Data\\'.Str::studly($dataType);
 
         if (class_exists($dataClass)) {
             $this->data = new $dataClass;
@@ -35,7 +36,7 @@ class Loader
             );
         }
 
-        if (! empty($filterCode)) {
+        if (!empty($filterCode)) {
             if (preg_match('/^\d{6}$/', $filterCode)) {
                 $this->filterCode = $filterCode;
             } else {
@@ -52,7 +53,7 @@ class Loader
     public function load()
     {
         if ($this->data instanceof Province) {
-            if (! empty($this->filterCode)) {
+            if (!empty($this->filterCode)) {
                 throw new \InvalidArgumentException(
                     sprintf('省份不需要传递过滤编码 `%s`', $this->filterCode)
                 );

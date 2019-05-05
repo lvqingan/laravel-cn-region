@@ -2,15 +2,16 @@
 
 namespace Lvqingan\Region\Tests;
 
+use Lvqingan\Test\MockModels\Contact;
 use Lvqingan\Test\MockModels\Migrator;
 use Lvqingan\Test\MockModels\User;
-use Lvqingan\Test\MockModels\Contact;
 use PHPUnit\Framework\TestCase;
 
 class HasRegionTest extends TestCase
 {
     /**
-     * 测试默认区域字段名称
+     * 测试默认区域字段名称.
+     *
      * @test
      * @throws \ReflectionException
      */
@@ -24,7 +25,8 @@ class HasRegionTest extends TestCase
     }
 
     /**
-     * 测试自定义区域字段名称
+     * 测试自定义区域字段名称.
+     *
      * @test
      * @throws \ReflectionException
      */
@@ -38,7 +40,8 @@ class HasRegionTest extends TestCase
     }
 
     /**
-     * 测试错误的区域字段名
+     * 测试错误的区域字段名.
+     *
      * @test
      */
     public function wrongFieldName()
@@ -54,7 +57,8 @@ class HasRegionTest extends TestCase
     }
 
     /**
-     * 测试错误的区域字段值
+     * 测试错误的区域字段值.
+     *
      * @test
      */
     public function wrongRegionCode()
@@ -70,7 +74,8 @@ class HasRegionTest extends TestCase
     }
 
     /**
-     * 测试省市区名称获取
+     * 测试省市区名称获取.
+     *
      * @test
      */
     public function regionName()
@@ -86,9 +91,11 @@ class HasRegionTest extends TestCase
     }
 
     /**
-     * 测试区域等于查询
+     * 测试区域等于查询.
+     * 
      * @dataProvider provideContacts
      * @test
+     *
      * @param array $contacts
      */
     public function whereRegion($contacts)
@@ -113,9 +120,11 @@ class HasRegionTest extends TestCase
     }
 
     /**
-     * 测试区域包含查询
+     * 测试区域包含查询.
+     * 
      * @dataProvider provideContacts
      * @test
+     *
      * @param array $contacts
      */
     public function whereInRegion($contacts)

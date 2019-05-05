@@ -5,7 +5,8 @@ namespace Lvqingan\Region\Data;
 class Province implements Data
 {
     /**
-     * 获取全部数据
+     * 获取全部数据.
+     * 
      * @return array
      */
     public function all()
@@ -49,8 +50,10 @@ class Province implements Data
     }
 
     /**
-     * 根据编码返回数据
+     * 根据编码返回数据.
+     *
      * @param string $code
+     *
      * @return array|string|bool
      */
     public function find($code)

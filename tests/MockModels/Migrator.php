@@ -5,9 +5,11 @@ namespace Lvqingan\Test\MockModels;
 use Illuminate\Database\Capsule\Manager as DB;
 use Illuminate\Database\Schema\Blueprint;
 
-class Migrator {
+class Migrator
+{
 
-    public function up() {
+    public function up()
+    {
         DB::schema()->dropIfExists('users');
 
         DB::schema()->create('users', function(Blueprint $t) {
@@ -35,7 +37,8 @@ class Migrator {
         });
     }
 
-    public function down() {
+    public function down()
+    {
         DB::schema()->drop('users');
         DB::schema()->drop('contacts');
     }
