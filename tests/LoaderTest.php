@@ -75,7 +75,7 @@ class LoaderTest extends TestCase
 
     /**
      * 只允许6位数字作为过滤编码参数.
-     * 
+     *
      * @test
      */
     public function restrictFilterCode()

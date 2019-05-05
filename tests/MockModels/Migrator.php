@@ -12,7 +12,7 @@ class Migrator
     {
         DB::schema()->dropIfExists('users');
 
-        DB::schema()->create('users', function(Blueprint $t) {
+        DB::schema()->create('users', function (Blueprint $t) {
             $t->increments('id');
 
             $t->string('name');
@@ -25,7 +25,7 @@ class Migrator
 
         DB::schema()->dropIfExists('contacts');
 
-        DB::schema()->create('contacts', function(Blueprint $t) {
+        DB::schema()->create('contacts', function (Blueprint $t) {
             $t->increments('id');
 
             $t->string('name');

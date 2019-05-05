@@ -6,7 +6,7 @@ class Province implements Data
 {
     /**
      * 获取全部数据.
-     * 
+     *
      * @return array
      */
     public function all()

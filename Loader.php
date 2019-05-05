@@ -21,7 +21,7 @@ class Loader
     /**
      * Loader constructor.
      *
-     * @param string $dataType 区域类型
+     * @param string $dataType   区域类型
      * @param string $filterCode 过滤编码
      */
     public function __construct($dataType, $filterCode = '')
@@ -29,7 +29,7 @@ class Loader
         $dataClass = 'Lvqingan\\Region\\Data\\'.Str::studly($dataType);
 
         if (class_exists($dataClass)) {
-            $this->data = new $dataClass;
+            $this->data = new $dataClass();
         } else {
             throw new \InvalidArgumentException(
                 sprintf('无效的区域类型 `%s`, 只允许使用 `province`, `city`和`district`', $dataType)

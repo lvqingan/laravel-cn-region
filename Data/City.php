@@ -378,7 +378,7 @@ class City implements Data
         if (Str::endsWith($code, '0000')) { // 按省份查询
             $provincePrefix = substr($code, 0, 2);
 
-            $filtered = collect($all)->filter(function($value, $key) use ($provincePrefix) {
+            $filtered = collect($all)->filter(function ($value, $key) use ($provincePrefix) {
                 return Str::startsWith($key, $provincePrefix);
             });
 

@@ -3178,7 +3178,7 @@ class District implements Data
         if (Str::endsWith($code, '00')) { // 按市查询
             $cityPrefix = substr($code, 0, 4);
 
-            $filtered = collect($all)->filter(function($value, $key) use ($cityPrefix) {
+            $filtered = collect($all)->filter(function ($value, $key) use ($cityPrefix) {
                 return Str::startsWith($key, $cityPrefix);
             });
 

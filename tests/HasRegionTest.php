@@ -13,6 +13,7 @@ class HasRegionTest extends TestCase
      * 测试默认区域字段名称.
      *
      * @test
+     *
      * @throws \ReflectionException
      */
     public function defaultFieldName()
@@ -28,6 +29,7 @@ class HasRegionTest extends TestCase
      * 测试自定义区域字段名称.
      *
      * @test
+     *
      * @throws \ReflectionException
      */
     public function customFieldName()
@@ -92,7 +94,7 @@ class HasRegionTest extends TestCase
 
     /**
      * 测试区域等于查询.
-     * 
+     *
      * @dataProvider provideContacts
      * @test
      *
@@ -121,7 +123,7 @@ class HasRegionTest extends TestCase
 
     /**
      * 测试区域包含查询.
-     * 
+     *
      * @dataProvider provideContacts
      * @test
      *
