@@ -4,6 +4,8 @@
 
 [![Build Status](https://api.travis-ci.org/lvqingan/laravel-cn-region.svg?branch=master)](https://travis-ci.org/lvqingan/laravel-cn-region)
 
+[![Style Status](https://github.styleci.io/repos/183974432/shield?style=plastic)](https://github.styleci.io/repos/183974432)
+
 #### 安装
 
 1. 安装代码库
